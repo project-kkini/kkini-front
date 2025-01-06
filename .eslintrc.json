@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "plugins": ["@typescript-eslint", "prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "createDefaultProgram": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "ignorePatterns": ["*.config.*"],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
+  "rules": {
+    "import/order": [
+      "warn",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
+        "pathGroups": [
+          {
+            "pattern": "next",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "~/**",
+            "group": "external",
+            "position": "after"
+          }
+        ]
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "prettier/prettier": "warn",
+    "import/prefer-default-export": "off",
+    "react/require-default-props": "off",
+    "no-restricted-syntax": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/button-has-type": "off",
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/no-static-element-interactions": "warn"
+  }
+}
