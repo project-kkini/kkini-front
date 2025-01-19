@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Suspense } from 'react';
+import { CSSProperties, Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: '끼니',
@@ -13,9 +13,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Suspense>{children}</Suspense>
+      <body style={BodyStyle}>
+        <Suspense>
+          <div style={ContainerStyle}>{children}</div>
+        </Suspense>
       </body>
     </html>
   );
 }
+
+const BodyStyle: CSSProperties = {
+  margin: 0,
+};
+
+const ContainerStyle: CSSProperties = {
+  maxWidth: 640,
+  margin: '0 auto',
+  height: '100vh',
+  overflow: 'auto',
+};

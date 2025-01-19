@@ -1,19 +1,8 @@
-import { typographyVariant, letterSpacing, fontSize, lineHeight } from './src/system/token/typography';
 import type { Config } from 'tailwindcss';
-import { fontWeightVariant, fontWeight } from './src/system/token/fontWeight';
 
 const px0To10 = { ...Array.from(Array(11)).reduce((acc, _, i) => ({ ...acc, [i]: `${i}px` }), {}) };
 const px0To100 = { ...Array.from(Array(101)).reduce((acc, _, i) => ({ ...acc, [i]: `${i}px` }), {}) };
 const px0To2000 = { ...Array.from(Array(2001)).reduce((acc, _, i) => ({ ...acc, [i]: `${i}px` }), {}) };
-
-const typographyToken = typographyVariant.reduce(
-  (acc, typo) => ({
-    ...acc,
-    [typo]: [fontSize[typo], { lineHeight: lineHeight[typo], letterSpacing: letterSpacing[typo] }],
-  }),
-  {},
-);
-const fontWeightToken = fontWeightVariant.reduce((acc, token) => ({ ...acc, [token]: fontWeight[token] }), {});
 
 const config: Config = {
   darkMode: ['class'],
@@ -34,9 +23,7 @@ const config: Config = {
       borderWidth: px0To10,
       fontSize: {
         ...px0To100,
-        ...typographyToken,
       },
-      fontWeight: fontWeightToken,
       lineHeight: px0To100,
       minWidth: px0To2000,
       minHeight: px0To2000,
