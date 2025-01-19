@@ -69,6 +69,7 @@ const TextFieldContainerStyle: CSSProperties = {
 };
 
 const TextFieldStyle: CSSProperties = {
+  fontSize: 16,
   display: 'block',
   padding: '20px',
   borderRadius: 12,
