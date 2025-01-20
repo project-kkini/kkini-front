@@ -5,9 +5,9 @@ interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   socialType: 'kakao';
 }
 
-export function SocialIconButton({ socialType }: IconButtonProps) {
+export function SocialIconButton({ socialType, ...props }: IconButtonProps) {
   return (
-    <button style={buttonStyle}>
+    <button style={buttonStyle} {...props}>
       <SwitchCase
         value={socialType}
         caseBy={{
