@@ -67,7 +67,7 @@
     "@tiptap/react": "^2.5.4",
     "@tiptap/starter-kit": "^2.5.4",
     "@tiptap/suggestion": "^2.5.4",
-    "axios": "^1.7.2",
+    "axios": "^1.7.9",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cookies-next": "^4.2.1",
