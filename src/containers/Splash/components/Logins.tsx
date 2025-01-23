@@ -14,6 +14,5 @@ export function Logins() {
 
 const loginsStyle: CSSProperties = {
   display: 'flex',
-  gap: '30px',
   justifyContent: 'center',
 };
