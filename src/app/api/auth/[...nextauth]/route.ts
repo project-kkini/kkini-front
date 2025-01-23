@@ -13,12 +13,16 @@ const socialLogin: CallbacksOptions['signIn'] = async ({ account }) => {
   if (accessToken == null || provider == null) return false;
 
   try {
-    const { data } = await http.post(
+    const { data, headers } = await http.post(
       `/auth/oauth/social-login?provider=${provider}`,
       {},
       { headers: { social_access_token: accessToken } },
     );
-    // @TODO 로그인 성공 시 처리하기
+    /**
+     * @TODO
+     * 정보 관리하는 방식 논의 후 처리하기.
+     */
+    console.log('@@ success --> ', { data, accessToken: headers.authorization, refreshToken: headers.refreshtoken });
     return true;
   } catch (error) {
     /**
