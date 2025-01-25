@@ -1,119 +1,37 @@
 import type { Config } from 'tailwindcss';
 
-const px0To10 = { ...Array.from(Array(11)).reduce((acc, _, i) => ({ ...acc, [i]: `${i}px` }), {}) };
-const px0To100 = { ...Array.from(Array(101)).reduce((acc, _, i) => ({ ...acc, [i]: `${i}px` }), {}) };
-const px0To2000 = { ...Array.from(Array(2001)).reduce((acc, _, i) => ({ ...acc, [i]: `${i}px` }), {}) };
-
 const config: Config = {
   darkMode: ['class'],
-  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
-  safelist: ['ProseMirror'],
-  prefix: '',
+  content: ['./src/**/*.{ts,tsx}'],
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
-    },
     extend: {
-      width: px0To2000,
-      height: px0To2000,
-      borderWidth: px0To10,
-      fontSize: {
-        ...px0To100,
-      },
-      lineHeight: px0To100,
-      minWidth: px0To2000,
-      minHeight: px0To2000,
-      spacing: px0To2000,
-      borderRadius: { ...px0To100, button: 6 },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-      boxShadow: {
-        drodpown: '0px 0px 10px 5px rgba(0, 0, 0, 0.08)',
-        nav: '0px 4px 25px 1px rgba(0,0,0,0.05)',
-        memo: '0px 1px 5px 0px rgba(249, 249, 250, 0.50), 0px 1px 5px 0px rgba(152, 155, 162, 0.15)',
-        login: '0px 2px 8px 0px rgba(0, 0, 0, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.08)',
-      },
       colors: {
         white: '#FFFFFF',
         black: '#000000',
-        neutral: {
-          '1': '#F9F9FA',
-          '3': '#F1F2F3',
-          '5': '#EAEBEC',
-          '10': '#DBDCDF',
-          '20': '#CCCDD1',
-          '30': '#AEB0B6',
-          '35': '#989BA2',
-          '40': '#878A93',
-          '50': '#70737C',
-          '60': '#5A5C63',
-          '70': '#46474C',
-          '75': '#37383C',
-          '80': '#27282C',
-          '90': '#212225',
-          '95': '#1B1C1E',
+        gray: {
+          50: '#F7F8FA',
+          100: '#F2F3F6',
+          200: '#EAEBEE',
+          300: '#DCDEE2',
+          400: '#D1D3D9',
+          500: '#ADB1BA',
+          600: '#868B94',
+          700: '#4D5159',
+          800: '#393A3F',
+          900: '#212124',
         },
-        red: {
-          '1': '#FFFAF7',
-          '5': '#FFEBE0',
-          '10': '#FCAEA9',
-          '20': '#FF8F87',
-          '30': '#FE7A70',
-          '40': '#FF6C62',
-          '50': '#F1564B',
-        },
-        mint: {
-          '1': '#C6FAE6',
-          '10': '#98F9D5',
-          '20': '#29FFB0',
-          '30': '#08F29B',
-          '40': '#0DD78C',
-          '50': '#1BA673',
-        },
-        blue: {
-          bg: {
-            '1': '#E8F1FF',
-          },
-          red: {
-            '1': '#FFFAF7',
-            '5': '#FFEBE0',
-            '10': '#FCAEA9',
-            '20': '#FF8F87',
-            '30': '#FE7A70',
-            '40': '#FF6C62',
-            '50': '#F1564B',
-          },
-          mint: {
-            '1': '#C6FAE6',
-            '10': '#98F9D5',
-            '20': '#29FFB0',
-            '30': '#08F29B',
-            '40': '#0DD78C',
-            '50': '#1BA673',
-          },
-          text: {
-            '1': '#418CC3',
-          },
-        },
-        purple: {
-          bg: {
-            '1': '#F1E8FF',
-          },
-          text: {
-            '1': '#9C6BB3',
-          },
-        },
-        yellow: {
-          '1': '#D77B0F',
-          bg: {
-            '1': '#FFF3C2',
-          },
+        orange: {
+          50: '#FFF5F0',
+          100: '#FFE2D2',
+          200: '#FFD2B8',
+          300: '#FFBC97',
+          400: '#FF9D66',
+          500: '#FE6F0F',
+          600: '#FA6616',
+          700: '#F05805',
+          800: '#CC4701',
+          900: '#B44105',
+          950: '#A03A02',
         },
       },
     },
