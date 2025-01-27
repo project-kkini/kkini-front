@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { CSSProperties, Suspense } from 'react';
+import '@/styles/global.css';
 
 export const metadata: Metadata = {
   title: '끼니',
