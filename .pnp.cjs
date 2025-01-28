@@ -29,6 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@chromatic-com/storybook", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:1.7.0"],\
+            ["@radix-ui/react-compose-refs", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:1.1.1"],\
             ["@storybook/addon-essentials", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:8.2.9"],\
             ["@storybook/addon-interactions", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:8.2.9"],\
             ["@storybook/addon-links", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:8.2.9"],\
@@ -60,6 +61,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:4.6.2"],\
             ["eslint-plugin-storybook", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:0.8.0"],\
             ["framer-motion", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:11.3.30"],\
+            ["kakao.maps.d.ts", "npm:0.1.40"],\
             ["next", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:14.2.4"],\
             ["postcss", "npm:8.4.41"],\
             ["prettier", "npm:3.3.3"],\
@@ -3663,6 +3665,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@radix-ui/react-compose-refs", [\
+        ["npm:1.1.1", {\
+          "packageLocation": "./.yarn/cache/@radix-ui-react-compose-refs-npm-1.1.1-2480de3ef9-1be82f9f7f.zip/node_modules/@radix-ui/react-compose-refs/",\
+          "packageDependencies": [\
+            ["@radix-ui/react-compose-refs", "npm:1.1.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:1.1.1", {\
+          "packageLocation": "./.yarn/__virtual__/@radix-ui-react-compose-refs-virtual-332c173513/0/cache/@radix-ui-react-compose-refs-npm-1.1.1-2480de3ef9-1be82f9f7f.zip/node_modules/@radix-ui/react-compose-refs/",\
+          "packageDependencies": [\
+            ["@radix-ui/react-compose-refs", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:1.1.1"],\
+            ["@types/react", "npm:18.3.4"],\
+            ["react", "npm:18.3.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@rushstack/eslint-patch", [\
         ["npm:1.10.4", {\
           "packageLocation": "./.yarn/cache/@rushstack-eslint-patch-npm-1.10.4-a760e177e3-ec17ac954e.zip/node_modules/@rushstack/eslint-patch/",\
@@ -6658,6 +6682,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["bbo-gak", "workspace:."],\
             ["@chromatic-com/storybook", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:1.7.0"],\
+            ["@radix-ui/react-compose-refs", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:1.1.1"],\
             ["@storybook/addon-essentials", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:8.2.9"],\
             ["@storybook/addon-interactions", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:8.2.9"],\
             ["@storybook/addon-links", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:8.2.9"],\
@@ -6689,6 +6714,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:4.6.2"],\
             ["eslint-plugin-storybook", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:0.8.0"],\
             ["framer-motion", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:11.3.30"],\
+            ["kakao.maps.d.ts", "npm:0.1.40"],\
             ["next", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:14.2.4"],\
             ["postcss", "npm:8.4.41"],\
             ["prettier", "npm:3.3.3"],\
@@ -11356,6 +11382,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["array.prototype.flat", "npm:1.3.2"],\
             ["object.assign", "npm:4.1.5"],\
             ["object.values", "npm:1.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["kakao.maps.d.ts", [\
+        ["npm:0.1.40", {\
+          "packageLocation": "./.yarn/cache/kakao.maps.d.ts-npm-0.1.40-31fc1b5fb8-3dfeea1151.zip/node_modules/kakao.maps.d.ts/",\
+          "packageDependencies": [\
+            ["kakao.maps.d.ts", "npm:0.1.40"]\
           ],\
           "linkType": "HARD"\
         }]\

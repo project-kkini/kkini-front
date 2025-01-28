@@ -2234,6 +2234,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-compose-refs@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@radix-ui/react-compose-refs@npm:1.1.1"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 1be82f9f7fab96cc10f167a2e4f976e0135a63d473334f664c06f02af13bc5ea1994cb0505f89ed190d756cb65d57506721c030908af07e49b9e3cfd36044f33
+  languageName: node
+  linkType: hard
+
 "@rushstack/eslint-patch@npm:^1.3.3":
   version: 1.10.4
   resolution: "@rushstack/eslint-patch@npm:1.10.4"
@@ -4295,6 +4308,7 @@ __metadata:
   resolution: "bbo-gak@workspace:."
   dependencies:
     "@chromatic-com/storybook": ^1.6.1
+    "@radix-ui/react-compose-refs": ^1.1.1
     "@storybook/addon-essentials": ^8.2.1
     "@storybook/addon-interactions": ^8.2.1
     "@storybook/addon-links": ^8.2.1
@@ -4326,6 +4340,7 @@ __metadata:
     eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-storybook: ^0.8.0
     framer-motion: ^11.3.8
+    kakao.maps.d.ts: ^0.1.40
     next: 14.2.4
     postcss: ^8
     prettier: ^3.3.2
@@ -8194,6 +8209,13 @@ __metadata:
     object.assign: ^4.1.4
     object.values: ^1.1.6
   checksum: f4b05fa4d7b5234230c905cfa88d36dc8a58a6666975a3891429b1a8cdc8a140bca76c297225cb7a499fad25a2c052ac93934449a2c31a44fc9edd06c773780a
+  languageName: node
+  linkType: hard
+
+"kakao.maps.d.ts@npm:^0.1.40":
+  version: 0.1.40
+  resolution: "kakao.maps.d.ts@npm:0.1.40"
+  checksum: 3dfeea11519b0560594507e9d1fffd6e6763bc798f8ffb296145cb2e0b681963a6ed8d3b8a26eb2475b1ef50fc7b6d87ed6f932142ae20bf44a99e44dbbda55d
   languageName: node
   linkType: hard
 
