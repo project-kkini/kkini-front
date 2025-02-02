@@ -14,7 +14,7 @@ const socialLogin: CallbacksOptions['signIn'] = async ({ account }) => {
 
   try {
     const { data, headers } = await http.post(
-      `/auth/oauth/social-login?provider=${provider}`,
+      `/v1/auth/oauth/social-login?provider=${provider}`,
       {},
       { headers: { social_access_token: accessToken } },
     );
