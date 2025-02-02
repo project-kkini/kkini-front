@@ -6,6 +6,6 @@ interface SwitchCaseProps<T extends string | number> {
   defaultComponent?: ReactNode | null;
 }
 
-export const SwitchCase = <T extends string | number>({ value, caseBy, defaultComponent }: SwitchCaseProps<T>) => {
+export const SwitchCase = <T extends string | number>({ value, caseBy, defaultComponent = null }: SwitchCaseProps<T>) => {
   return caseBy[value] ?? defaultComponent;
 };
