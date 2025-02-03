@@ -10,7 +10,9 @@ const socialLogin: CallbacksOptions['signIn'] = async ({ account }) => {
   const accessToken = account?.access_token;
   const provider = account?.provider;
 
-  if (accessToken == null || provider == null) return false;
+  if (accessToken == null || provider == null) {
+    return false
+  }
 
   try {
     const { data, headers } = await http.post(
