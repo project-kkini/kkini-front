@@ -81,16 +81,18 @@ export const MapMarker = (props: MapMarkerProps) => {
 
     const options: kakao.maps.MarkerOptions = {
       position: new kakao.maps.LatLng(position.lat, position.lng),
-      ...(image != null && {
-        image: new kakao.maps.MarkerImage(
-          image.src,
-          new kakao.maps.Size(
-            typeof image.size === 'number' ? image.size : image.size.width,
-            typeof image.size === 'number' ? image.size : image.size.height,
-          ),
-          image.options,
-        ),
-      }),
+      ...(image != null
+        ? {
+            image: new kakao.maps.MarkerImage(
+              image.src,
+              new kakao.maps.Size(
+                typeof image.size === 'number' ? image.size : image.size.width,
+                typeof image.size === 'number' ? image.size : image.size.height,
+              ),
+              image.options,
+            ),
+          }
+        : {}),
       ...restOptions,
     };
     new kakao.maps.Marker(options).setMap(map);
