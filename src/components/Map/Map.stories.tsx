@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Map, MapMarker, MapProps } from './Map';
+import { Map, MapProps } from './Map';
 import { KakKaoMapProvider } from '@/contexts/KaKaoMapProvider';
 import { getCenterPosition } from './utils';
+import { MapMarker } from './MapMarker';
 
 const meta: Meta = {
   title: 'components/Map',
