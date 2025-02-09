@@ -1,4 +1,5 @@
 import { KakKaoMapProvider } from '@/contexts/KaKaoMapProvider';
+import { AuthProvider } from '@/contexts/AuthProvider';
 import type { Metadata } from 'next';
 import { CSSProperties, Suspense } from 'react';
 import '@/styles/global.css';
@@ -17,9 +18,11 @@ export default function RootLayout({
     <html lang="en">
       <body style={BodyStyle}>
         <Suspense>
-          <KakKaoMapProvider>
-            <div style={ContainerStyle}>{children}</div>
-          </KakKaoMapProvider>
+          <AuthProvider>
+            <KakKaoMapProvider>
+              <div style={ContainerStyle}>{children}</div>
+            </KakKaoMapProvider>
+          </AuthProvider>
         </Suspense>
       </body>
     </html>
