@@ -28,14 +28,13 @@ const socialLogin: CallbacksOptions['signIn'] = async ({ user, account }) => {
     );
 
     const { memberId, email, nickname } = data;
-    const { authorization, refreshtoken } = headers;
+    const { authorization } = headers;
 
     if (account != null) {
       user.memberId = memberId;
       user.email = email;
       user.nickname = nickname;
       account.access_token = authorization;
-      account.refresh_token = refreshtoken;
     }
     return true;
   } catch (error) {
