@@ -3,28 +3,40 @@ import NextAuth from 'next-auth';
 import { NextAuthOptions, CallbacksOptions } from 'next-auth';
 import kakaoProvider from 'next-auth/providers/kakao';
 
+interface MemberSignUpResponse {
+  memberId: string;
+  nickname: string;
+  email: string;
+}
+
 /**
  * @returns 로그인에 성공한 경우 true, 실패한 경우 false를 반환합니다.
  */
-const socialLogin: CallbacksOptions['signIn'] = async ({ account }) => {
+const socialLogin: CallbacksOptions['signIn'] = async ({ user, account }) => {
   const accessToken = account?.access_token;
   const provider = account?.provider;
 
   if (accessToken == null || provider == null) {
-    return false
+    return false;
   }
 
   try {
-    const { data, headers } = await http.post(
+    const { data, headers } = await http.post<MemberSignUpResponse>(
       `/v1/auth/oauth/social-login?provider=${provider}`,
       {},
       { headers: { social_access_token: accessToken } },
     );
-    /**
-     * @TODO
-     * 정보 관리하는 방식 논의 후 처리하기.
-     */
-    console.log('@@ success --> ', { data, accessToken: headers.authorization, refreshToken: headers.refreshtoken });
+
+    const { memberId, email, nickname } = data;
+    const { authorization, refreshtoken } = headers;
+
+    if (account != null) {
+      user.memberId = memberId;
+      user.email = email;
+      user.nickname = nickname;
+      account.access_token = authorization;
+      account.refresh_token = refreshtoken;
+    }
     return true;
   } catch (error) {
     /**
