@@ -1,5 +1,5 @@
 import axios, { InternalAxiosRequestConfig } from 'axios';
-import { CookieFactory } from './cookie';
+import { CookieManager } from './cookie';
 
 export const http = axios.create({
   baseURL: `${process.env.SERVER_URL}/api`,
@@ -10,7 +10,7 @@ export const http = axios.create({
 
 // ---------------request---------------------
 const handleRequestFulfilled = (config: InternalAxiosRequestConfig) => {
-  const cookies = new CookieFactory();
+  const cookies = new CookieManager();
   const accessToken = cookies.getAccessToken();
 
   if (accessToken != null) {

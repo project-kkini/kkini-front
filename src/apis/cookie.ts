@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 const isProduction = process.env.NODE_ENV === 'production';
 const ACCESS_TOKEN = 'access_token';
 
-export class CookieFactory {
+export class CookieManager {
   private cookieStore: ReturnType<typeof cookies>;
 
   constructor() {
