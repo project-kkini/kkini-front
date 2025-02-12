@@ -1,3 +1,4 @@
+import { CookieFactory } from '@/apis/cookie';
 import { http } from '@/apis/http';
 import NextAuth from 'next-auth';
 import { NextAuthOptions, CallbacksOptions } from 'next-auth';
@@ -27,15 +28,12 @@ const socialLogin: CallbacksOptions['signIn'] = async ({ user, account }) => {
       { headers: { social_access_token: accessToken } },
     );
 
+    const cookies = new CookieFactory();
+
     const { memberId, email, nickname } = data;
     const { authorization } = headers;
+    cookies.setAccessToken(authorization);
 
-    if (account != null) {
-      user.memberId = memberId;
-      user.email = email;
-      user.nickname = nickname;
-      account.access_token = authorization;
-    }
     return true;
   } catch (error) {
     /**
