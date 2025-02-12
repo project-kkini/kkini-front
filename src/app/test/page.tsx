@@ -7,7 +7,7 @@ export default function Page() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get('/api/restaurant');
+        const response = await axios.get('/api/test');
         console.log('@@@ response, ', response);
       } catch (error) {
         console.log(error);
