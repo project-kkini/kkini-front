@@ -52,7 +52,7 @@ export function RequiredPage() {
           </DropdownContainer>
         ) : null}
       </div>
-      {name != null ? (
+      {name != null && name !== '' ? (
         <>
           <Spacing size={48} />
           <StatusSection
