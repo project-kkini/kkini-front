@@ -63,6 +63,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-storybook", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:0.8.0"],\
             ["framer-motion", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:11.3.30"],\
             ["kakao.maps.d.ts", "npm:0.1.40"],\
+            ["keen-slider", "npm:6.8.6"],\
             ["next", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:14.2.4"],\
             ["next-auth", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:4.24.11"],\
             ["postcss", "npm:8.4.41"],\
@@ -6802,6 +6803,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-storybook", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:0.8.0"],\
             ["framer-motion", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:11.3.30"],\
             ["kakao.maps.d.ts", "npm:0.1.40"],\
+            ["keen-slider", "npm:6.8.6"],\
             ["next", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:14.2.4"],\
             ["next-auth", "virtual:d9cd1cf96fc105240ce4126e416dd90faeefaf08cea474f2ffdd0a21bc6194bc993779567e0c0bf19c40cbbd585d546a065d8582fcc0925f8826e5fbca78aa72#npm:4.24.11"],\
             ["postcss", "npm:8.4.41"],\
@@ -11514,6 +11516,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/kakao.maps.d.ts-npm-0.1.40-31fc1b5fb8-3dfeea1151.zip/node_modules/kakao.maps.d.ts/",\
           "packageDependencies": [\
             ["kakao.maps.d.ts", "npm:0.1.40"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["keen-slider", [\
+        ["npm:6.8.6", {\
+          "packageLocation": "./.yarn/cache/keen-slider-npm-6.8.6-37c2f3dde1-f87e65d72e.zip/node_modules/keen-slider/",\
+          "packageDependencies": [\
+            ["keen-slider", "npm:6.8.6"]\
           ],\
           "linkType": "HARD"\
         }]\
