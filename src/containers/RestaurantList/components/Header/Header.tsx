@@ -23,6 +23,7 @@ const containerStyle: CSSProperties = {
   justifyContent: 'space-between',
   padding: '20px 20px 16px 20px',
   backgroundColor: 'white',
+  zIndex: 9000,
 };
 
 const titleStyle: CSSProperties = {

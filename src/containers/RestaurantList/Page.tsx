@@ -6,6 +6,7 @@ import { Filter } from './components/Filter/Filter';
 import { restaurantList } from './dummy';
 import { Card } from './components/Card/Card';
 import { CSSProperties } from 'react';
+import { FloatButton } from './components/FloatButton/FloatButton';
 
 export function RestaurantList() {
   return (
@@ -19,6 +20,7 @@ export function RestaurantList() {
           <Card key={restaurant.name} {...restaurant} />
         ))}
       </div>
+      <FloatButton />
     </>
   );
 }
