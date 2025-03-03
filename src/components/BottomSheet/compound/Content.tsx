@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 
 export interface BottomSheetContentProps extends ContentProps {
   handleBar?: boolean;
-  handleClose?: boolean | ReactNode;
+  handleClose?: ReactNode;
 }
 
 export function BottomSheetContent({

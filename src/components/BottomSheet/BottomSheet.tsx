@@ -6,6 +6,7 @@ import { BottomSheetFooter, BottomSheetFooterProps } from './compound/Footer';
 import { BottomSheetBody, BottomSheetBodyProps } from './compound/Body';
 import { BottomSheetTitle, BottomSheetTitleProps } from './compound/Title';
 import { BottomSheetTrigger, BottomSheetTriggerProps } from './compound/Trigger';
+import { BottomSheetCloseIconButton, BottomSheetCloseIconButtonProps } from './compound/CloseIconButton';
 
 type BottomSheetRootProps = RootProps;
 function BottomSheet({
@@ -29,6 +30,7 @@ export {
   BottomSheetFooter,
   BottomSheetTitle,
   BottomSheetClose,
+  BottomSheetCloseIconButton,
 };
 export type {
   BottomSheetRootProps,
@@ -36,4 +38,5 @@ export type {
   BottomSheetBodyProps,
   BottomSheetFooterProps,
   BottomSheetTitleProps,
+  BottomSheetCloseIconButtonProps,
 };
