@@ -15,7 +15,7 @@ export interface MapProps extends Omit<kakao.maps.MapOptions, 'center' | 'level'
   /**
    * 지도 크기
    */
-  size: number | { width: number; height: number };
+  size: number | { width: number | `${number}%`; height: number | `${number}%` };
   /**
    * 중심으로 설정할 위치
    * @default 강남역
