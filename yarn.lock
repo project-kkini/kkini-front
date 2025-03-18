@@ -4673,6 +4673,7 @@ __metadata:
     eslint-plugin-storybook: ^0.8.0
     framer-motion: ^11.3.8
     kakao.maps.d.ts: ^0.1.40
+    keen-slider: ^6.8.6
     next: 14.2.4
     next-auth: ^4.24.11
     postcss: ^8
@@ -8593,6 +8594,13 @@ __metadata:
   version: 0.1.40
   resolution: "kakao.maps.d.ts@npm:0.1.40"
   checksum: 3dfeea11519b0560594507e9d1fffd6e6763bc798f8ffb296145cb2e0b681963a6ed8d3b8a26eb2475b1ef50fc7b6d87ed6f932142ae20bf44a99e44dbbda55d
+  languageName: node
+  linkType: hard
+
+"keen-slider@npm:^6.8.6":
+  version: 6.8.6
+  resolution: "keen-slider@npm:6.8.6"
+  checksum: f87e65d72e3b2e73cbd52b1908c1458b253ec5a2a2d3e1e34bd1a831172d18568649188cf3e4ad679c7988568929195ae91d4b7a1c0bd3d6da592a453be3723a
   languageName: node
   linkType: hard
 
