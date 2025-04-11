@@ -28,7 +28,7 @@ export const Default: StoryObj<typeof Text> = {
   args: {
     children: '동해물과 백두산이 마르고 닳도록',
   },
-  render: (args) => <Text as="label" {...args} />,
+  render: (args) => <Text {...args} />,
 };
 
 export const TextSnapshot: StoryObj<typeof Text> = {
