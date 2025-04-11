@@ -10,6 +10,10 @@ export default meta;
 
 export const Default: StoryObj<typeof Text> = {
   argTypes: {
+    as: {
+      control: 'select',
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span', 'label', 'div'],
+    },
     fontWeight: {
       control: 'inline-radio',
       options: ['regular', 'medium', 'semibold', 'bold'],
