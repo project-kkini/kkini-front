@@ -1,5 +1,5 @@
 import { ComponentProps, LiHTMLAttributes } from 'react';
-import { textColorVar, textVariants } from './styles';
+import { textVariants } from './styles';
 
 import { forwardRefWithAs } from '@/react-utils/forwardRefWithAs';
 import { COLORS } from '@/styles/colors';
@@ -13,14 +13,14 @@ interface TextBaseProps {
     | 'title-18'
     | 'subtitle-16'
     | 'subtitle-14'
-    | 'body-16px'
-    | 'body-14px'
-    | 'caption-13px'
-    | 'caption-12px'
-    | 'label-16px'
-    | 'label-14px'
-    | 'label-12px'
-    | 'label-11px';
+    | 'body-16'
+    | 'body-14'
+    | 'caption-13'
+    | 'caption-12'
+    | 'label-16'
+    | 'label-14'
+    | 'label-12'
+    | 'label-11';
   fontWeight?: 'regular' | 'medium' | 'semibold' | 'bold';
   color?: string;
 }
@@ -31,7 +31,7 @@ export const Text = forwardRefWithAs<LiHTMLAttributes<HTMLSpanElement> & TextBas
   const {
     className,
     as: Tag = 'span',
-    variant = 'body-16px',
+    variant = 'body-16',
     fontWeight = 'regular',
     color = COLORS.gray[900],
     style: styleFromProps,
@@ -39,14 +39,14 @@ export const Text = forwardRefWithAs<LiHTMLAttributes<HTMLSpanElement> & TextBas
   } = props;
 
   const style = {
-    [textColorVar]: color,
+    '--kkini-text-color': color,
     ...styleFromProps,
   };
 
   return (
     <Tag
       ref={ref}
-      className={clsx(className, textVariants({ className, variant, fontWeight }), `text-[var(${textColorVar})]`)}
+      className={clsx(className, textVariants({ className, variant, fontWeight }), `text-[var(--kkini-text-color)]`)}
       style={style}
       {...restProps}
     />

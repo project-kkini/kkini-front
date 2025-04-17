@@ -10,16 +10,16 @@ export const textVariants = cva('', {
       'subtitle-16': 'text-[16px]/[135%]',
       'subtitle-14': 'text-[14px]/[140%]',
 
-      'body-16px': 'text-[16px]/[150%]',
-      'body-14px': 'text-[14px]/[155%]',
+      'body-16': 'text-[16px]/[150%]',
+      'body-14': 'text-[14px]/[155%]',
 
-      'caption-13px': 'text-[13px]/[150%]',
-      'caption-12px': 'text-[12px]/[135%]',
+      'caption-13': 'text-[13px]/[150%]',
+      'caption-12': 'text-[12px]/[135%]',
 
-      'label-16px': 'text-[16px]/[135%]',
-      'label-14px': 'text-[14px]/[140%]',
-      'label-12px': 'text-[12px]/[135%]',
-      'label-11px': 'text-[11px]/[130%]',
+      'label-16': 'text-[16px]/[135%]',
+      'label-14': 'text-[14px]/[140%]',
+      'label-12': 'text-[12px]/[135%]',
+      'label-11': 'text-[11px]/[130%]',
     },
     fontWeight: {
       regular: 'font-normal',
@@ -29,5 +29,3 @@ export const textVariants = cva('', {
     },
   },
 });
-
-export const textColorVar = '--kkini-text-color';
