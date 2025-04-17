@@ -29,5 +29,3 @@ export const textVariants = cva('', {
     },
   },
 });
-
-export const textColorVar = '--kkini-text-color';

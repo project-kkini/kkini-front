@@ -96,19 +96,19 @@ export const TextSnapshot: StoryObj<typeof Text> = {
       </div>
       <div className="flex items-center gap-4">
         <Text variant="label-14" className="w-24">
-          label-14px
+          label-14
         </Text>
         <Text variant="label-14">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
         <Text variant="label-14" className="w-24">
-          label-12px
+          label-12
         </Text>
         <Text variant="label-12">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
         <Text variant="label-14" className="w-24">
-          label-11px
+          label-11
         </Text>
         <Text variant="label-11">동해물과 백두산이 마르고 닳도록</Text>
       </div>
