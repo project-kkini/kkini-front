@@ -35,82 +35,82 @@ export const TextSnapshot: StoryObj<typeof Text> = {
   render: () => (
     <div className="flex flex-col gap-4">
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
+        <Text variant="label-14" className="w-24">
           title-24
         </Text>
         <Text variant="title-24">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
+        <Text variant="label-14" className="w-24">
           title-20
         </Text>
         <Text variant="title-20">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
+        <Text variant="label-14" className="w-24">
           title-18
         </Text>
         <Text variant="title-18">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
+        <Text variant="label-14" className="w-24">
           subtitle-16
         </Text>
         <Text variant="subtitle-16">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
+        <Text variant="label-14" className="w-24">
           subtitle-14
         </Text>
         <Text variant="subtitle-14">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
-          body-16px
+        <Text variant="label-14" className="w-24">
+          body-16
         </Text>
-        <Text variant="body-16px">동해물과 백두산이 마르고 닳도록</Text>
+        <Text variant="body-16">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
-          body-14px
+        <Text variant="label-14" className="w-24">
+          body-14
         </Text>
-        <Text variant="body-14px">동해물과 백두산이 마르고 닳도록</Text>
+        <Text variant="body-14">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
-          caption-13px
+        <Text variant="label-14" className="w-24">
+          caption-13
         </Text>
-        <Text variant="caption-13px">동해물과 백두산이 마르고 닳도록</Text>
+        <Text variant="caption-13">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
-          caption-12px
+        <Text variant="label-14" className="w-24">
+          caption-12
         </Text>
-        <Text variant="caption-12px">동해물과 백두산이 마르고 닳도록</Text>
+        <Text variant="caption-12">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
-          label-16px
+        <Text variant="label-14" className="w-24">
+          label-16
         </Text>
-        <Text variant="label-16px">동해물과 백두산이 마르고 닳도록</Text>
+        <Text variant="label-16">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
+        <Text variant="label-14" className="w-24">
           label-14px
         </Text>
-        <Text variant="label-14px">동해물과 백두산이 마르고 닳도록</Text>
+        <Text variant="label-14">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
+        <Text variant="label-14" className="w-24">
           label-12px
         </Text>
-        <Text variant="label-12px">동해물과 백두산이 마르고 닳도록</Text>
+        <Text variant="label-12">동해물과 백두산이 마르고 닳도록</Text>
       </div>
       <div className="flex items-center gap-4">
-        <Text variant="label-14px" className="w-24">
+        <Text variant="label-14" className="w-24">
           label-11px
         </Text>
-        <Text variant="label-11px">동해물과 백두산이 마르고 닳도록</Text>
+        <Text variant="label-11">동해물과 백두산이 마르고 닳도록</Text>
       </div>
     </div>
   ),

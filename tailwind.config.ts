@@ -1,7 +1,8 @@
-import { COLORS } from './src/styles/colors';
 import type { Config } from 'tailwindcss';
+import { COLORS } from './src/styles/colors';
 
 const config: Config = {
+  mode: 'jit',
   darkMode: ['class'],
   content: ['./src/**/*.{ts,tsx}'],
   theme: {
