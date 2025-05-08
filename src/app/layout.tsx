@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { CSSProperties, Suspense } from 'react';
 import '@/styles/global.css';
+import QueryProvider from '@/context/QueryProvider';
 
 export const metadata: Metadata = {
   title: '끼니',
@@ -26,13 +27,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body style={BodyStyle} className={pretendard.className}>
-        <Suspense>
-          <AuthProvider>
-            <KakKaoMapProvider>
-              <div style={ContainerStyle}>{children}</div>
-            </KakKaoMapProvider>
-          </AuthProvider>
-        </Suspense>
+        <QueryProvider>
+          <Suspense>
+            <AuthProvider>
+              <KakKaoMapProvider>
+                <div style={ContainerStyle}>{children}</div>
+              </KakKaoMapProvider>
+            </AuthProvider>
+          </Suspense>
+        </QueryProvider>
       </body>
     </html>
   );

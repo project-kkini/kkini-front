@@ -2,10 +2,12 @@ import { COLORS } from '@/styles/colors';
 import { IconBaseProps } from './SVG/types';
 import { X } from './SVG/X';
 import { Distance } from './SVG/Distance';
+import { CaretRight } from './SVG/CaretRight';
 
 const iconMap = {
   X: X,
   distance: Distance,
+  caretRight: CaretRight,
 };
 
 export interface IconProps extends IconBaseProps {
