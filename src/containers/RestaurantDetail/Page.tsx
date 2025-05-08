@@ -1,8 +1,6 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { ChevronLeftIcon } from './assets/ChevronLeftIcon';
-import { UploadSimpleIcon } from './assets/UploadSimpleIcon';
 import { mockRestaurant } from './mocks/restaurant';
 import { ImageSwiper } from './components/ImageSwiper';
 import { Spacing } from '@/components/Spacing';
@@ -13,6 +11,7 @@ import { MapTirifoldIcon } from './assets/MapTirifoldIcon';
 import { Map } from '@/components/Map/Map';
 import { NeedsTagList } from './components/NeedsTagList';
 import { ReviewList } from './components/ReviewList';
+import { Icon } from '@/components/Icon/Icon';
 
 export function RestaurantDetail() {
   const restaurant = mockRestaurant;
@@ -36,9 +35,9 @@ export function RestaurantDetail() {
         <ImageSwiper images={restaurant.restaurantImageUrls} />
         <div className="absolute top-0 w-full flex items-center justify-between px-[20px] py-[12px]">
           <button onClick={handleBack}>
-            <ChevronLeftIcon />
+            <Icon size={24} name="chevronLeft" />
           </button>
-          <UploadSimpleIcon />
+          <Icon size={24} name="uploadSimple" />
         </div>
       </div>
       <div className="px-[20px] py-[24px]">
