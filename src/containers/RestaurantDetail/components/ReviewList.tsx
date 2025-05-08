@@ -12,9 +12,9 @@ interface ReviewListProps {
 
 export const ReviewList = ({ reviews }: ReviewListProps) => {
   return (
-    <div className="flex flex-col gap-[10px]">
+    <ul className="flex flex-col gap-[10px] m-[0px] p-[0px]">
       {reviews.map(({ id, user, content, createdAt, imageUrl, isFirst }) => (
-        <div key={id} className="p-[16px] bg-gray-50 rounded-[12px] flex flex-col gap-[16px]">
+        <li key={id} className="p-[16px] bg-gray-50 rounded-[12px] flex flex-col gap-[16px]">
           <div className="flex items-center gap-[6px]">
             <img src={user.profileImageUrl} alt={user.name} className="w-[24px] h-[24px] rounded-full" />
             <p className="text-[13px] text-gray-700 font-bold line-height-[19.5px]">{user.name}</p>
@@ -45,8 +45,8 @@ export const ReviewList = ({ reviews }: ReviewListProps) => {
             </div>
           )}
           <p className="text-[12px] text-gray-600 font-normal line-height-[16.2px]">{formatDate(createdAt)}</p>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
