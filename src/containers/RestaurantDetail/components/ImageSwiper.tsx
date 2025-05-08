@@ -16,11 +16,11 @@ export function ImageSwiper({ images, onIndexChange }: ImageSwiperProps) {
 
     const scrollLeft = scrollRef.current.scrollLeft;
     const width = scrollRef.current.clientWidth;
-    const newIndex = Math.round(scrollLeft / width) + 1;
+    const nextIndex = Math.round(scrollLeft / width) + 1;
 
-    if (newIndex !== currentIndex) {
-      setCurrentIndex(newIndex);
-      onIndexChange?.(newIndex);
+    if (nextIndex !== currentIndex) {
+      setCurrentIndex(nextIndex);
+      onIndexChange?.(nextIndex);
     }
   };
 
