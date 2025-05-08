@@ -1,9 +1,9 @@
-import { ComponentProps, LiHTMLAttributes } from 'react';
-import { textVariants } from './styles';
+import { ComponentProps, HTMLAttributes } from 'react';
 
-import { forwardRefWithAs } from '@/react-utils/forwardRefWithAs';
 import { COLORS } from '@/styles/colors';
 import { clsx } from 'clsx';
+import { forwardRefWithAs } from '@/react-utils/forwardRefWithAs';
+import { textVariants } from './styles';
 
 export type TextProps = ComponentProps<typeof Text>;
 interface TextBaseProps {
@@ -27,7 +27,7 @@ interface TextBaseProps {
 
 type AllowedTags = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div' | 'label';
 
-export const Text = forwardRefWithAs<LiHTMLAttributes<HTMLSpanElement> & TextBaseProps, AllowedTags>((props, ref) => {
+export const Text = forwardRefWithAs<HTMLAttributes<HTMLSpanElement> & TextBaseProps, AllowedTags>((props, ref) => {
   const {
     className,
     as: Tag = 'span',
