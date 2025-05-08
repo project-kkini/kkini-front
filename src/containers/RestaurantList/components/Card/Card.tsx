@@ -4,6 +4,7 @@ import { RestaurantMetaType } from '../../type';
 import { DistanceIcon } from '../Icons/DistanceIcon';
 import { Spacing } from '@/components/Spacing';
 import 'keen-slider/keen-slider.min.css';
+import { Icon } from '@/components/Icon/Icon';
 
 interface Props extends RestaurantMetaType {}
 
@@ -31,7 +32,7 @@ export function Card({ name, distance, menu, prices, recommends, imageSrcs, comm
           <span style={menuStyle}>{menu}</span>
         </div>
         <div style={topRightStyle}>
-          <DistanceIcon />
+          <Icon name="distance" />
           <span style={distanceStyle}>{distance}m</span>
         </div>
       </div>

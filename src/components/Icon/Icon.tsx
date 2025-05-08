@@ -1,9 +1,11 @@
 import { COLORS } from '@/styles/colors';
 import { IconBaseProps } from './SVG/types';
 import { X } from './SVG/X';
+import { Distance } from './SVG/Distance';
 
 const iconMap = {
   X: X,
+  distance: Distance,
 };
 
 export interface IconProps extends IconBaseProps {
