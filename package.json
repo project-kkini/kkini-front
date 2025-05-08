@@ -25,6 +25,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.8",
+    "keen-slider": "^6.8.6",
     "next": "14.2.4",
     "next-auth": "^4.24.11",
     "react": "^18",
@@ -32,7 +33,7 @@
     "tailwind-merge": "^2.4.0",
     "tailwind-variants": "^0.2.1",
     "tailwindcss-animate": "^1.0.7",
-    "ts-pattern": "^5.3.1"
+    "vaul": "^1.1.2"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
