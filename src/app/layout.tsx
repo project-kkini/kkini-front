@@ -1,6 +1,7 @@
 import { KakKaoMapProvider } from '@/contexts/KaKaoMapProvider';
 import { AuthProvider } from '@/contexts/AuthProvider';
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 import { CSSProperties, Suspense } from 'react';
 import '@/styles/global.css';
 
@@ -9,6 +10,14 @@ export const metadata: Metadata = {
   description: '취업 자료 아카이빙 서비스 뽀각입니다.',
 };
 
+const pretendard = localFont({
+  //localFont를 사용하여 로컬 폰트 적용
+  src: '../../public/fonts/PretendardVariable.woff2',
+  display: 'swap',
+  weight: '45 920',
+  variable: '--font-pretendard',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={BodyStyle}>
+      <body style={BodyStyle} className={pretendard.className}>
         <Suspense>
           <AuthProvider>
             <KakKaoMapProvider>
