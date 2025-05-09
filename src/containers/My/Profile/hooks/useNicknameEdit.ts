@@ -34,11 +34,17 @@ export const useNicknameEdit = (originalNickname: string) => {
   };
 };
 
+const NICKNAME_EDIT_BUTTON_TEXT = {
+  EDIT: '수정',
+  SAVE: '저장',
+  CANCEL: '취소',
+};
+
 const getInputButtonText = (isEditing: boolean, isSame: boolean) => {
   if (isEditing) {
-    return isSame ? '취소' : '저장';
+    return isSame ? NICKNAME_EDIT_BUTTON_TEXT.CANCEL : NICKNAME_EDIT_BUTTON_TEXT.SAVE;
   }
-  return '수정';
+  return NICKNAME_EDIT_BUTTON_TEXT.EDIT;
 };
 
 const getInputBottomText = (isEmpty: boolean) => {
