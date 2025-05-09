@@ -1,9 +1,10 @@
 'use client';
 
 import { CSSProperties, PropsWithChildren, forwardRef, useEffect, useRef, useState } from 'react';
-import { composeRefs } from '@radix-ui/react-compose-refs';
+
 import { useKaKaoMapContext } from '@/contexts/KaKaoMapProvider';
-import { MapContextProvider, useMapContext } from './context';
+import { composeRefs } from '@radix-ui/react-compose-refs';
+import { MapContextProvider } from './context';
 import { Position } from './types';
 
 const 강남역 = {
@@ -15,7 +16,7 @@ export interface MapProps extends Omit<kakao.maps.MapOptions, 'center' | 'level'
   /**
    * 지도 크기
    */
-  size: number | { width: CSSProperties['width']; height: CSSProperties['height'] };
+  size: number | { width?: CSSProperties['width']; height?: CSSProperties['height'] };
   /**
    * 중심으로 설정할 위치
    * @default 강남역
