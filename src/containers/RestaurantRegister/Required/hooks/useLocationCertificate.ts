@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
 
 export function useLocationCertificate() {
-  const [certificated, setCertificated] = useState<boolean>();
+  const [certificated, setCertificated] = useState<boolean>(false);
 
   useEffect(() => {
     if ('geolocation' in navigator) {
-      console.log('이 브라우저는 위치 정보 제공을 지원합니다.');
-
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude, accuracy } = position.coords;
-          console.log(`위도: ${latitude}, 경도: ${longitude}, 정확도: ${accuracy}미터`);
+          console.debug(`위도: ${latitude}, 경도: ${longitude}, 정확도: ${accuracy}미터`);
+          setCertificated(true);
         },
         (error) => {
           setCertificated(false);

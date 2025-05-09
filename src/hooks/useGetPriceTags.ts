@@ -7,7 +7,7 @@ interface GetPriceResponse {
 }
 
 async function getPriceTags() {
-  return http.get<any, Array<GetPriceResponse>>(`/api/v1/priceTags`);
+  return http.get<any, Array<GetPriceResponse>>(`/v1/priceTags`);
 }
 
 // 가격태그 목록 조회

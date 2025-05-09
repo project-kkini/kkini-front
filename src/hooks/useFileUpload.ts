@@ -43,9 +43,9 @@ async function putImageToS3({ url, file }: { url: string; file: ArrayBuffer }) {
 }
 
 async function getFileURL({ fileName }: { fileName: string }) {
-  return http.get<any, string>(`/api/v1/images/${fileName}`);
+  return http.get<any, string>(`/v1/images/${fileName}`);
 }
 
 async function getPresignedUrl({ restaurantId }: { restaurantId: number }) {
-  return http.get<any, { presignedUrl: string }>(`/api/v1/images/review/${restaurantId}/presigned-url`);
+  return http.get<any, { presignedUrl: string }>(`/v1/images/review/${restaurantId}/presigned-url`);
 }

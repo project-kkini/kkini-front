@@ -7,8 +7,11 @@ import { restaurantList } from './dummy';
 import { Card } from './components/Card/Card';
 import { CSSProperties } from 'react';
 import { FloatButton } from './components/FloatButton/FloatButton';
+import { useGetSearchRestaurant } from '@/hooks/useGetRestaurantSearch';
 
 export function RestaurantList() {
+  const { data } = useGetSearchRestaurant({ menuCategoryIds: [], priceTagIds: [], needsTagIds: [] });
+
   return (
     <>
       <Header />

@@ -10,7 +10,7 @@ interface Params {
 }
 
 async function postCurrentRestaurant({ restaurantId, ...params }: Params) {
-  return http.post(`/api/v1/restaurants/${restaurantId}/review`, params);
+  return http.post(`/v1/restaurants/${restaurantId}/review`, params);
 }
 
 // 기존 끼니 식당에 리뷰 등록

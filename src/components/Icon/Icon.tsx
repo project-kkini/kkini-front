@@ -5,6 +5,7 @@ import { Distance } from './SVG/Distance';
 import { CaretRight } from './SVG/CaretRight';
 import { UploadSimpleIcon } from './SVG/UploadSimple';
 import { ChevronLeft } from './SVG/ChevronLeft';
+import { Lock } from './SVG/Lock';
 
 const iconMap = {
   X: X,
@@ -12,6 +13,7 @@ const iconMap = {
   caretRight: CaretRight,
   uploadSimple: UploadSimpleIcon,
   chevronLeft: ChevronLeft,
+  lock: Lock,
 };
 
 export interface IconProps extends IconBaseProps {

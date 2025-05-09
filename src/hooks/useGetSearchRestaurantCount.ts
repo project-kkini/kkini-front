@@ -4,8 +4,8 @@ import { create } from '@/utils/QS';
 
 interface Params {
   name: string;
-  latitude: string;
-  longitude: string;
+  latitude: number;
+  longitude: number;
 }
 
 async function searchRestaurantCount({ name, latitude, longitude }: Params) {
@@ -15,7 +15,7 @@ async function searchRestaurantCount({ name, latitude, longitude }: Params) {
 // 추천 가능 식당 조회
 export function useGetSearchRestaurantCount({ name, latitude, longitude }: Params) {
   return useQuery({
-    queryKey: ['searchRestaurant', name],
+    queryKey: ['searchRestaurantCount', name],
     queryFn: () => searchRestaurantCount({ name, latitude, longitude }),
   });
 }

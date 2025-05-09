@@ -7,7 +7,7 @@ interface GetNeedsTagsResponse {
 }
 
 async function getNeedsTags() {
-  return http.get<any, Array<GetNeedsTagsResponse>>(`/api/v1/needsTags`);
+  return http.get<any, Array<GetNeedsTagsResponse>>(`/v1/needsTags`);
 }
 
 // 태그 목록 조회

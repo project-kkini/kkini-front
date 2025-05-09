@@ -20,7 +20,7 @@ interface Response {
 }
 
 async function getRestaurantDetail({ restaurantId }: { restaurantId: number }) {
-  return http.get<any, Response>(`/api/v1/restaurants/${restaurantId}/registered`);
+  return http.get<any, Response>(`/v1/restaurants/${restaurantId}/registered`);
 }
 
 // 식당 정보 상세 조회
