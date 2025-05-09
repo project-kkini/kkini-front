@@ -1,24 +1,26 @@
 import { COLORS } from '@/styles/colors';
-import { CaretRight } from './SVG/CaretRight';
-import { ChevronLeft } from './SVG/ChevronLeft';
+import { IconBaseProps } from './SVG/types';
+import { X } from './SVG/X';
 import { Distance } from './SVG/Distance';
+import { CaretRight } from './SVG/CaretRight';
+import { UploadSimpleIcon } from './SVG/UploadSimple';
+import { ChevronLeft } from './SVG/ChevronLeft';
+import { Lock } from './SVG/Lock';
 import { EnvelopeOpen } from './SVG/EnvelopeOpen';
 import { Map } from './SVG/Map';
 import { Money } from './SVG/Money';
 import { Note } from './SVG/Note';
 import { PencilSimple } from './SVG/PencilSimple';
 import { ThumbsUp } from './SVG/ThumbsUp';
-import { UploadSimpleIcon } from './SVG/UploadSimple';
-import { X } from './SVG/X';
-import { IconBaseProps } from './SVG/types';
 
 const iconMap = {
   X: X,
   distance: Distance,
+  caretRight: CaretRight,
   uploadSimple: UploadSimpleIcon,
   chevronLeft: ChevronLeft,
+  lock: Lock,
   map: Map,
-  caretRight: CaretRight,
   thumbsUp: ThumbsUp,
   note: Note,
   envelopeOpen: EnvelopeOpen,

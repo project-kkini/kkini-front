@@ -1,7 +1,7 @@
 export type NeedsTag = {
   id: number;
   text: string;
-  ratio: number;
+  ratio?: number;
 };
 
 export type PriceTag = {
@@ -12,7 +12,7 @@ export type PriceTag = {
 export type Review = {
   id: number;
   isFirst?: boolean;
-  user: {
+  user?: {
     id: number;
     name: string;
     profileImageUrl: string;

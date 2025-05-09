@@ -1,7 +1,7 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { mockRestaurant } from './mocks/restaurant';
+import { useRouter, useSearchParams } from 'next/navigation';
+// import { mockRestaurant } from './mocks/restaurant';
 import { ImageSwiper } from './components/ImageSwiper';
 import { Spacing } from '@/components/Spacing';
 import { ThumbsUpIcon } from './assets/ThumbsUpIcon';
@@ -12,17 +12,25 @@ import { Map } from '@/components/Map/Map';
 import { NeedsTagList } from './components/NeedsTagList';
 import { ReviewList } from './components/ReviewList';
 import { Icon } from '@/components/Icon/Icon';
+import { useGetRestaurantDetail } from '@/hooks/useGetRestaurantDetail';
 
 export function RestaurantDetail() {
-  const restaurant = mockRestaurant;
   const router = useRouter();
+
+  const searchParams = useSearchParams();
+  const id = Number(searchParams.get('id'));
+  const { data } = useGetRestaurantDetail({ restaurantId: id });
+
+  if (data == null) {
+    return null;
+  }
 
   const handleBack = () => {
     router.back();
   };
 
   const handleRoadAddress = () => {
-    window.open(restaurant.roadAddress, '_blank');
+    window.open(data.roadAddress, '_blank');
   };
 
   const handleRestaurantRegister = () => {
@@ -32,7 +40,7 @@ export function RestaurantDetail() {
   return (
     <div>
       <div className="relative">
-        <ImageSwiper images={restaurant.restaurantImageUrls} />
+        <ImageSwiper images={data.restaurantImageUrls} />
         <div className="absolute top-0 w-full flex items-center justify-between px-[20px] py-[12px]">
           <button onClick={handleBack}>
             <Icon size={24} name="chevronLeft" />
@@ -41,21 +49,21 @@ export function RestaurantDetail() {
         </div>
       </div>
       <div className="px-[20px] py-[24px]">
-        <p className="text-[14px] text-gray-700 font-normal line-height-[21.7px]">{restaurant.menuCategory}</p>
+        <p className="text-[14px] text-gray-700 font-normal line-height-[21.7px]">{data.menuCategory}</p>
         <Spacing size={4} />
-        <h1 className="text-[24px] font-bold line-height-[32.4px]">{restaurant.name}</h1>
+        <h1 className="text-[24px] font-bold line-height-[32.4px]">{data.name}</h1>
         <Spacing size={20} />
         <div className="flex items-center gap-[8px]">
           <ThumbsUpIcon />
           <p className="text-[16px] text-gray-700 font-medium line-height-[21.6px]">
-            주변 직장인 <span className="text-orange-500">{restaurant.reviews.length}명</span>의 추천
+            주변 직장인 <span className="text-orange-500">{data.reviews.length}명</span>의 추천
           </p>
         </div>
         <Spacing size={18} />
         <div className="flex items-center gap-[8px]">
           <MoneyIcon />
           <p className="text-[16px] text-gray-700 font-medium line-height-[21.6px]">
-            {restaurant.priceTags.map((tag) => tag.text).join(', ')}
+            {data.priceTags.map((tag) => tag.text).join(', ')}
           </p>
         </div>
         <Spacing size={18} />
@@ -63,11 +71,11 @@ export function RestaurantDetail() {
           <div className="flex gap-[8px]">
             <MapPinIcon />
             <div>
-              <p className="text-[16px] text-gray-700 font-medium line-height-[21.6px]">
-                회사에서 <span className="font-bold">{restaurant.distance}m</span> 떨어져있어요
-              </p>
+              {/* <p className="text-[16px] text-gray-700 font-medium line-height-[21.6px]">
+                회사에서 <span className="font-bold">{data.distance}m</span> 떨어져있어요
+              </p> */}
               <Spacing size={5} />
-              <p className="text-[14px] text-gray-600 font-normal line-height-[19.6px]">{restaurant.address}</p>
+              <p className="text-[14px] text-gray-600 font-normal line-height-[19.6px]">{data.address}</p>
             </div>
           </div>
           <button className="flex gap-[4px] items-center" onClick={handleRoadAddress}>
@@ -82,15 +90,15 @@ export function RestaurantDetail() {
       <div className="px-[20px] py-[24px]">
         <h3 className="text-[18px] font-bold line-height-[24.3px]">이럴 때 방문해요!</h3>
         <Spacing size={20} />
-        <NeedsTagList needsTags={restaurant.needsTags} />
+        <NeedsTagList needsTags={data.needsTags} />
       </div>
       <div className="h-[8px] bg-gray-50" />
       <div className="px-[20px] pt-[24px] pb-[100px]">
         <h3 className="text-[18px] font-bold line-height-[24.3px]">
-          주변 직장인들의 찐 후기 <span className="text-orange-500">{restaurant.reviews.length}</span>
+          주변 직장인들의 찐 후기 <span className="text-orange-500">{data.reviews.length}</span>
         </h3>
         <Spacing size={20} />
-        <ReviewList reviews={restaurant.reviews} />
+        <ReviewList reviews={data.reviews} />
       </div>
       <div className="fixed bottom-[24px] left-[50%] translate-x-[-50%]">
         <button
