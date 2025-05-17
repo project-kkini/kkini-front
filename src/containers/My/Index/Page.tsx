@@ -1,17 +1,21 @@
 'use client';
 
 import { Border } from '@/components/Border/Border';
-import { COLORS } from '@/styles/colors';
 import { IconProps } from '@/components/Icon/Icon';
+import { Text } from '@/components/Text/Text';
+import { COLORS } from '@/styles/colors';
+import { useRouter } from 'next/navigation';
+import { Row } from '../components/Row';
 import { Menu } from './components/Menu';
 import { Profile } from './components/Profile';
-import { Row } from '../components/Row';
-import { Text } from '@/components/Text/Text';
-import { useRouter } from 'next/navigation';
 
 const MY_PAGE_MENU: { iconName: IconProps['name']; title: string; link: string }[] = [
   { iconName: 'thumbsUp', title: '나의 끼니', link: '/my/my-kkini' },
-  { iconName: 'envelopeOpen', title: '끼니팀에게 피드백주기', link: 'https://naver.com' }, // @TODO: 피드백 페이지 갈아끼우기
+  {
+    iconName: 'envelopeOpen',
+    title: '끼니팀에게 피드백주기',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSfeODbbb_KJuC1IOGWzan0tD-BsnvOeR_xMyWPj71XrEswk8g/viewform',
+  },
   { iconName: 'note', title: '약관 및 정책', link: '/my/terms' },
 ];
 
