@@ -9,6 +9,6 @@ export const GET = async (_: NextRequest, { params }: { params: { restaurantId: 
     const { data } = await http.get<boolean>(`/v1/restaurants/${params.restaurantId}/registered`);
     return NextResponse.json(data);
   } catch (error) {
-    handleServerError(error);
+    return handleServerError(error);
   }
 };
