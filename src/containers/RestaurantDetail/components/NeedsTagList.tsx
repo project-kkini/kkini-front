@@ -12,7 +12,11 @@ export const NeedsTagList = ({ needsTags }: NeedsTagListProps) => {
           <div className="absolute top-0 left-0 w-[25%] h-full bg-orange-50" />
           <div className="relative flex justify-between items-center  px-[14px] py-[9px]">
             <p className="text-[14px] text-gray-900 font-bold line-height-[19.6px]">{tag.text}</p>
-            <p className="text-[14px] text-orange-500 font-bold line-height-[19.6px]">{Math.round(tag.ratio * 100)}%</p>
+            {tag.ratio != null && (
+              <p className="text-[14px] text-orange-500 font-bold line-height-[19.6px]">
+                {Math.round(tag.ratio * 100)}%
+              </p>
+            )}
           </div>
         </div>
       ))}

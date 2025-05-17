@@ -1,31 +1,36 @@
 import { CSSProperties } from 'react';
 import { Spacing } from '@/components/Spacing';
-
-const PRICE_LIST = ['만원 이하', '1만원대', '2만원대', '3만원 이상'];
+import { useGetPriceTags } from '@/hooks/useGetPriceTags';
 
 interface Props {
-  selectedPrice?: string;
-  onPriceClick: (price: string) => void;
+  selectedPrice?: number;
+  onPriceClick: (price: number) => void;
 }
 
 export function PriceSection({ selectedPrice, onPriceClick }: Props) {
+  const { data } = useGetPriceTags();
+
+  if (data == null) {
+    return null;
+  }
+
   return (
     <div style={ContainerStyle}>
       <div style={TitleContainerStyle}>
-        <span style={TitleStyle}>이런 상황에서 이 식당을 찾아요</span>
+        <span style={TitleStyle}>먹은 메뉴의 가격대예요</span>
         <span style={RequiredStyle}>필수</span>
       </div>
       <Spacing size={16} />
       <div style={PriceContainerStyle}>
-        {PRICE_LIST.map((price) => (
+        {data.map((price) => (
           <div
-            key={price}
+            key={price.id}
             style={{
               ...PriceStyle,
-              ...(selectedPrice === price ? SelectedPriceStyle : UnselectedPriceStyle),
+              ...(selectedPrice === price.id ? SelectedPriceStyle : UnselectedPriceStyle),
             }}
-            onClick={() => onPriceClick(price)}>
-            {price}
+            onClick={() => onPriceClick(price.id)}>
+            {price.text}
           </div>
         ))}
       </div>

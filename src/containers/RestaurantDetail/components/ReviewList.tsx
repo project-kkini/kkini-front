@@ -16,8 +16,8 @@ export const ReviewList = ({ reviews }: ReviewListProps) => {
       {reviews.map(({ id, user, content, createdAt, imageUrl, isFirst }) => (
         <li key={id} className="p-[16px] bg-gray-50 rounded-[12px] flex flex-col gap-[16px]">
           <div className="flex items-center gap-[6px]">
-            <img src={user.profileImageUrl} alt={user.name} className="w-[24px] h-[24px] rounded-full" />
-            <p className="text-[13px] text-gray-700 font-bold line-height-[19.5px]">{user.name}</p>
+            <img src={user?.profileImageUrl} alt={user?.name} className="w-[24px] h-[24px] rounded-full" />
+            <p className="text-[13px] text-gray-700 font-bold line-height-[19.5px]">{user?.name}</p>
             {isFirst && (
               <div className="flex gap-[2px] px-[6px] py-[4px] bg-white border border-orange-200 rounded-[6px]">
                 <CrownIcon />
@@ -32,7 +32,7 @@ export const ReviewList = ({ reviews }: ReviewListProps) => {
                 <div key={url + index} className="relative w-[calc((100%-8px)/3)] aspect-square">
                   <img
                     src={url}
-                    alt={`${user.name}의 리뷰 이미지`}
+                    alt={`${user?.name}의 리뷰 이미지`}
                     className="w-full h-full object-cover rounded-[8px]"
                   />
                   {index === 2 && imageUrl.length > 3 && (

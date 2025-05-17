@@ -1,13 +1,19 @@
 import { Spacing } from '@/components/Spacing';
 import { CSSProperties } from 'react';
-import { DUMMY_CHOICE } from '@/containers/dummy';
+import { useGetNeedsTags } from '@/hooks/useGetNeedsTags';
 
 interface Props {
-  selectedStatuses: string[];
-  onStatusClick: (status: string) => void;
+  selectedStatuses: number[];
+  onStatusClick: (status: number) => void;
 }
 
 export function StatusSection({ selectedStatuses, onStatusClick }: Props) {
+  const { data } = useGetNeedsTags();
+
+  if (data == null) {
+    return null;
+  }
+
   return (
     <div style={ContainerStyle}>
       <div style={TitleContainerStyle}>
@@ -16,15 +22,15 @@ export function StatusSection({ selectedStatuses, onStatusClick }: Props) {
       </div>
       <Spacing size={16} />
       <div style={ChoiceContainerStyle}>
-        {DUMMY_CHOICE.map((choice) => (
+        {data.map((choice) => (
           <div
-            key={choice}
+            key={choice.id}
             style={{
               ...ChoiceStyle,
-              ...(selectedStatuses.includes(choice) ? SelectedStatusStyle : UnselectedStatusStyle),
+              ...(selectedStatuses.includes(choice.id) ? SelectedStatusStyle : UnselectedStatusStyle),
             }}
-            onClick={() => onStatusClick(choice)}>
-            {choice}
+            onClick={() => onStatusClick(choice.id)}>
+            {choice.text}
           </div>
         ))}
       </div>
