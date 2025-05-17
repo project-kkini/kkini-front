@@ -1,18 +1,16 @@
 import { http } from '@/apis/http';
+import { GetPriceResponse } from '@/app/api/priceTags/route';
 import { useQuery } from '@tanstack/react-query';
-
-interface GetPriceResponse {
-  id: number;
-  text: string;
-}
+import axios from 'axios';
 
 async function getPriceTags() {
-  return http.get<any, Array<GetPriceResponse>>(`/v1/priceTags`);
+  const response = await axios.get<GetPriceResponse>(`/api/priceTags`);
+  return response.data;
 }
 
 // 가격태그 목록 조회
 export function useGetPriceTags() {
-  return useQuery<Array<GetPriceResponse>>({
+  return useQuery({
     queryKey: ['getPriceTags'],
     queryFn: getPriceTags,
   });

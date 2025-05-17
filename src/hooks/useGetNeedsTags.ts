@@ -1,18 +1,15 @@
-import { http } from '@/apis/http';
 import { useQuery } from '@tanstack/react-query';
-
-interface GetNeedsTagsResponse {
-  id: number;
-  text: string;
-}
+import axios from 'axios';
+import { GetNeedsTagsResponse } from '@/app/api/neeedsTags/route';
 
 async function getNeedsTags() {
-  return http.get<any, Array<GetNeedsTagsResponse>>(`/v1/needsTags`);
+  const response = await axios.get<GetNeedsTagsResponse>('/api/needsTags');
+  return response.data;
 }
 
 // 태그 목록 조회
 export function useGetNeedsTags() {
-  return useQuery<Array<GetNeedsTagsResponse>>({
+  return useQuery({
     queryKey: ['getNeedsTags'],
     queryFn: getNeedsTags,
   });

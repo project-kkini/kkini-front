@@ -1,8 +1,8 @@
-import { http } from '@/apis/http';
 import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 async function getRestaurantRegistered({ restaurantId }: { restaurantId: number }) {
-  return http.get<boolean>(`/v1/restaurants/${restaurantId}/registered`);
+  return axios.get<boolean>(`/api/restaurants/${restaurantId}/registered`);
 }
 
 // 끼니에 등록된 식당인지 여부
