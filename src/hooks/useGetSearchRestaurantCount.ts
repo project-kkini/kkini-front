@@ -1,6 +1,6 @@
-import { http } from '@/apis/http';
-import { useQuery } from '@tanstack/react-query';
 import { create } from '@/utils/QS';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 interface Params {
   name: string;
@@ -9,7 +9,7 @@ interface Params {
 }
 
 async function searchRestaurantCount({ name, latitude, longitude }: Params) {
-  return http.get(`/v1/seoulRestaurants/search/count${create({ name, latitude, longitude })}`);
+  return axios.get(`/api/seoulRestaurants/search/count${create({ name, latitude, longitude })}`);
 }
 
 // 추천 가능 식당 조회

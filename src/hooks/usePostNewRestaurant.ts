@@ -1,5 +1,5 @@
-import { http } from '@/apis/http';
 import { useMutation } from '@tanstack/react-query';
+import axios from 'axios';
 
 interface Params {
   restaurantId: number;
@@ -10,7 +10,7 @@ interface Params {
 }
 
 async function postNewRestaurant({ restaurantId, ...params }: Params) {
-  return http.post(`/v1/newRestaurants/${restaurantId}/review`, params);
+  return axios.post(`/api/newRestaurants/${restaurantId}/review`, params);
 }
 
 // 새로운 끼니 식당에 리뷰 등록

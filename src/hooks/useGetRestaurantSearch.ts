@@ -1,6 +1,5 @@
-import { http } from '@/apis/http';
-import { create } from '@/utils/QS';
 import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 interface Params {
   menuCategoryIds: number[];
@@ -9,7 +8,7 @@ interface Params {
 }
 
 async function searchRestaurant({}: Params) {
-  return http.get(`/v1/restaurants/search`);
+  return axios.get(`/api/restaurants/search`);
 }
 
 export function useGetSearchRestaurant({ menuCategoryIds, priceTagIds, needsTagIds }: Params) {
