@@ -1,1 +1,1 @@
-export { RestaurantRegisterPage } from '../../containers/RestaurantRegister/Page';
+export { RestaurantRegisterPage as default } from '../../containers/RestaurantRegister/Page';
