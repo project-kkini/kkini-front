@@ -3,7 +3,8 @@ import axios from 'axios';
 import { GetRestaurantsResponse } from '@/app/api/restaurants/[restaurantId]/route';
 
 async function getRestaurantDetail({ restaurantId }: { restaurantId: number }) {
-  return axios.get<GetRestaurantsResponse>(`/api/restaurants/${restaurantId}`);
+  const response = await axios.get<GetRestaurantsResponse>(`/api/restaurants/${restaurantId}`);
+  return response.data;
 }
 
 // 식당 정보 상세 조회
