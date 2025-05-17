@@ -1,25 +1,25 @@
 'use client';
 
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
+
 // import { mockRestaurant } from './mocks/restaurant';
-import { ImageSwiper } from './components/ImageSwiper';
+import { Icon } from '@/components/Icon/Icon';
+import { Map } from '@/components/Map/Map';
 import { Spacing } from '@/components/Spacing';
-import { ThumbsUpIcon } from './assets/ThumbsUpIcon';
-import { MoneyIcon } from './assets/MoneyIcon';
+import { useGetRestaurantDetail } from '@/hooks/useGetRestaurantDetail';
 import { MapPinIcon } from './assets/MapPinIcon';
 import { MapTirifoldIcon } from './assets/MapTirifoldIcon';
-import { Map } from '@/components/Map/Map';
+import { MoneyIcon } from './assets/MoneyIcon';
+import { ThumbsUpIcon } from './assets/ThumbsUpIcon';
+import { ImageSwiper } from './components/ImageSwiper';
 import { NeedsTagList } from './components/NeedsTagList';
 import { ReviewList } from './components/ReviewList';
-import { Icon } from '@/components/Icon/Icon';
-import { useGetRestaurantDetail } from '@/hooks/useGetRestaurantDetail';
 
 export function RestaurantDetail() {
   const router = useRouter();
 
-  const searchParams = useSearchParams();
-  const id = Number(searchParams.get('id'));
-  const { data } = useGetRestaurantDetail({ restaurantId: id });
+  const { id } = useParams();
+  const { data } = useGetRestaurantDetail({ restaurantId: Number(id) });
 
   if (data == null) {
     return null;
